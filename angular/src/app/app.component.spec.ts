@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'stockholder'`, () => {
+  it(`should have as title 'angular8form'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('stockholder');
+    expect(app.title).toEqual('angular8form');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('stockholder app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('angular8form app is running!');
   });
 });
