@@ -1,0 +1,38 @@
+    <div class="container">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <p class="h1 text-muted text-uppercase text-center mb-3">Login</p>
+
+
+          <div class="form-group">
+              <label for="role">Login As :   </label>
+              <select class="form-control " id="role">
+                  <option>Admin <a href="adminhome"></a></option>
+                  <option>User<a href="user"></a></option>
+                </select>
+                <br>
+                <label for="id">User Id:</label>
+              <input type="number"  class="form-control" placeholder="enter id" formControlName="id" id="id">
+
+              <label for="username">Username :</label>
+              <input type="text"  class="form-control" placeholder="enter username" formControlName="username" id="username">
+              
+              <br>
+              <label for="password">Password :</label>
+              <input type="password" class="form-control" placeholder="enter password" formControlName="password" name="password" id="password">
+              
+              <br>
+              <span class="psw" ><a href="#">forgot password?</a></span >
+              <br>
+                <button class="btn btn-success" (click)="addUser()" [disabled]="!loginForm.valid" >Login</button>
+              <br>
+              <p class="text-center w-100 my-2"><a href="register.html">Don't Have an Account? Click Here to Create an Account.</a></p>
+              <br>
+              <label><input type="checkbox">Remember Me</label>
+        </div>
+        
+      </form>
+
+    </div>
+
+
+  
