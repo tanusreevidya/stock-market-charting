@@ -1,0 +1,22 @@
+{
+  "company": [
+    {
+      "id": 1,
+      "sector": "it",
+      "companyname": "cts",
+      "ceo": "Brian",
+      "bod": "divya",
+      "stockList": "BSE",
+      "turnover": 150000
+    },
+    {
+      "id": 2,
+      "sector": "it",
+      "companyname": "microsoft",
+      "ceo": "satyam",
+      "bod": "sindhu",
+      "stockList": "BSE",
+      "turnover": 200000
+    }
+  ]
+}

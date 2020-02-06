@@ -1,0 +1,32 @@
+<div class="container">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    
+          <h1> REGISTRATION PAGE</h1>
+          <div class="form-group">
+        
+            <label for="id">User ID :</label>
+              <input type="number"  class="form-control" placeholder="enter id" formControlName="id" id="id" name="id">
+              <label for="username">Username :</label>
+              <input type="text"  class="form-control" placeholder="enter username" formControlName="username" id="username" name="username">
+          </div>
+          <div>
+              <label for="email">Email ID :</label>
+              <input type="text"  class="form-control" placeholder="enter valid email id" formControlName="email" id="email" name="email">
+              <br>
+              <label for="password">Password :</label>
+              <input type="password" id="password" class="form-control" placeholder="password" formControlName="password" name="password">
+              <br>
+              <label for="password"> Congirm Password :</label>
+              <input type="password" id="password" class="form-control" placeholder="password" formControlName="password"  name="password">
+              <br>
+              <label for="phone">Phone no :</label>
+              <input type="number" id="phone" class="form-control" placeholder="enter valid Phone number" formControlName="phone"  name="phone">
+              
+                <button class="btn btn-success" (click)="addUser()" [disabled]="!registrationForm.valid" >Signin</button>
+              
+        </div>
+        
+      </form>
+      
+
+    </div>

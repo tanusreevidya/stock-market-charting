@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand" >
+    <div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a routerLink="importdata" class="nav-link"><button class="btn btn-outline-primary"> Import Data</button></a>
+            </li>
+            <li class="nav-item">
+                <a href="companydetails" src=""class="nav-link" ><button class="btn btn-outline-primary"> Company Details</button></a>
+            </li>
+            <li class="nav-item">
+                <a href="stockExchange" class="nav-link"><button class="btn btn-outline-primary">Stock Exchange Details</button></a>
+            </li>
+            <li class="nav-item">
+                <a href="UpdateIpo" class="nav-link"><button class="btn btn-outline-primary">Update IPO</button></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1  class="text-center">UPDATECOMPANY</h1><br>
+        <form [formGroup]="addcompany" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+          <label for="sector"><b class="text-primary">SECTOR</b></label><br>
+          <input type="text" 
+          formControlName="sector"
+          class="form-control"
+           placeholder="Enter Sector Name"
+           name="sector" required><br>
+      </div>
+          <div class="form-group">
+            <label for="companyname"><b class="text-primary">COMPANY NAME</b></label><br>
+            <input type="text" 
+            formControlName="companyname"
+            class="form-control"
+             placeholder="Enter CompanyName"
+             name="companyname" required><br>
+        </div>
+        <div class="form-group">
+          <label for="ceo"><b class="text-primary">CEO</b></label><br>
+          <input type="text" 
+          formControlName="ceo"
+          class="form-control"
+           placeholder="Enter CEOName"
+           name="ceo" required><br>
+      </div>
+          <div class="form-group">
+                <label for="bod"><b class="text-primary">BOARD OF DIRECTORS</b></label><br>
+                <input type="text" 
+                formControlName="bod"
+                class="form-control"
+                 placeholder="Enter BOD"
+                 name="bod" required><br>
+            </div>
+            <div class=text-center class="form-group">
+                <label for="turnover"><b class="text-primary">TURNOVER</b></label><br>
+                <input type="number"
+                formControlName="turnover"
+                class="form-control" 
+                placeholder="Enter TurnOver"
+                name="turnover" required><br>
+            </div>
+            <button class="btn btn-success"
+            (click)="addCompany()" [disabled]="!addcompany.valid">UPDATE COMPANY</button>
+    
+             </form>
+    </div>
+</body>
+</html>
+
