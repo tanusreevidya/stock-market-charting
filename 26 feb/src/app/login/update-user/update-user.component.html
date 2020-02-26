@@ -1,0 +1,33 @@
+ 
+    <div class="container">
+        <form [formGroup]="updateUserForm" >
+          <p class="h1 text-muted text-uppercase text-center mb-3">Login</p>
+  
+  
+            <div class="form-group">
+                
+                  <label for="id">UserId :</label>
+                <input type="number"  class="form-control" placeholder="enter id" formControlName="id" name="id" id="id" disabled/> 
+  
+                <label for="username">Username :</label>
+                <input type="text"  class="form-control" placeholder="enter username" formControlName="username" name="username" id="username" >
+                
+                <label for="email">Email ID :</label>
+              <input type="text"  class="form-control" placeholder="enter valid email id" formControlName="email" id="email" name="email">
+              
+                <br>
+                <label for="password">Password :</label>
+                <input type="password" class="form-control" placeholder="enter password" formControlName="password" name="password" id="password">
+                
+                <label for="phone">Phone no :</label>
+              <input type="number" id="phone" class="form-control" placeholder="enter valid Phone number" formControlName="phone"  name="phone">
+              
+                  <button class="btn btn-success" (click)="UpdateUser()" [disabled]="!updateUserForm.valid" >Update</button>
+                <br>
+          </div>
+          
+        </form>
+  
+      </div>
+  
+  

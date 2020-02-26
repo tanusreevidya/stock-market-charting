@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand" >
+    <div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a routerLink="importdata" class="nav-link"><button class="btn btn-outline-primary"> Import Data</button></a>
+            </li>
+            <li class="nav-item">
+                <a href="companydetails" src=""class="nav-link" ><button class="btn btn-outline-primary"> Company Details</button></a>
+            </li>
+            <li class="nav-item">
+                <a href="stockExchange" class="nav-link"><button class="btn btn-outline-primary">Stock Exchange Details</button></a>
+            </li>
+            <li class="nav-item">
+                <a href="UpdateIpo" class="nav-link"><button class="btn btn-outline-primary">Update IPO</button></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="body" class="container mt-6">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <form [formGroup]='addStock' class="form-group border p-5 border-curved mt-5">
+            <p class="h1 text-muted text-uppercase text-center mb-4">Stock Exchange</p>
+         
+            <label for="stockname">Stock Exchange Name:</label>
+            <input type="text" class="form-control" placeholder="Name of Stock Exchange" formContolName="stockname">
+            <label for="stockid">Stock Exchange id:</label>
+            <input type="text" class="form-control" placeholder="id of Stock Exchange" formContolName="stockname">
+            <label for="remarks">Remarks:</label>
+            <textarea class="form-control mb-4" placeholder="Remarks" rows="3" formControlName="remarks"></textarea>
+            <button class="btn btn-outline-success text-dark text-center form-control" (click)="addTheStock()" [disabled]="!addStock.valid">Add Stock Exchange</button>
+          </form>
+        </div>
+    </div>
+</div>
