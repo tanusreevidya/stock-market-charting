@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <!-- Custom fonts for this template -->
+  <!-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
+
+  <!-- Custom styles for this template -->
+  <!-- <link href="css/landing-page.min.css" rel="stylesheet"> -->
+
+</head>
+
+<body>
+
+
+ 
+  <!-- <h1 class="site-heading text-center text-white d-none d-lg-block"> -->
+    <!-- <img src="..//assets/logo.png" class="rounded-circle" width="75" height="75"/> -->
+    <!-- <span class="site-heading-upper text-Success mb-3">Stock Market Charting</span> -->
+    <!-- <span class="site-heading-lower">Stock Market Charting</span> -->
+  <!-- </h1> -->
+
+<nav class="navbar navbar-expand-md navbar-light bg-transparent ">
+  <img src="..//assets/logo.png" class="rounded-circle" width="75" height="75"/>
+  <a class="navbar-brand text-success  d-lg-none" href=""> Stock Market Charting</a>&nbsp; &nbsp; &nbsp;
+ 
+  <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink = "" *ngIf="!userLoggedIn"><button class="btn btn-outline-success">Home </button></a>&nbsp; &nbsp; &nbsp;
+            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link" routerLink = "adminhome" *ngIf="isAdmin"><button class="btn btn-outline-success">Home </button></a>&nbsp; &nbsp; &nbsp;
+           </li>
+           <li class="nav-item active">
+            <a class="nav-link" routerLink = "userhome" *ngIf="isUser"><button class="btn btn-outline-success">Home </button></a>&nbsp; &nbsp; &nbsp;
+           </li> -->
+            <li class="nav-item">
+               <a class="nav-link" routerLink = "login" *ngIf="!userLoggedIn"><button class="btn btn-outline-success">Login</button></a>&nbsp; &nbsp; &nbsp;
+            </li>
+            <!-- <li class="nav-item">
+               <a class="nav-link" routerLink = "users"> Users List</a>&nbsp;&nbsp;&nbsp;
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" routerLink = "register" *ngIf="!userLoggedIn"><button class="btn btn-outline-success">Register</button></a>&nbsp; &nbsp; &nbsp;
+            </li>
+           <li class="nav-item">
+            <a class="nav-link" routerLink = "logout" *ngIf="userLoggedIn"><button class="btn btn-outline-danger">Log Out</button></a>
+           </li>
+          
+            
+        </ul>
+    </div>
+    <hr>
+</nav>
+<div>
+  
+  </div>
+  <div>
+<router-outlet></router-outlet>
+</div>
+
+<footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a [routerLink]="['/aboutUs']">About Us</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a [routerLink]="['/contactUs']">Contact Us</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy;Stock Holder Charting </p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="www.facebook.com">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="www.twitter.com">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="www.instagram">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+<!-- 
+<div class="footer bg bg-primary">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p class="float-center">2020@Copyright</p>
+  </div> -->
+  </body>
+  </html>

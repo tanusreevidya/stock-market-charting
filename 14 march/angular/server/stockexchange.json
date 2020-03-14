@@ -1,0 +1,14 @@
+{
+    "stockExchange":[
+    {
+        "id":1,
+        "stockname":"BSE",
+        "remarks":"Must use"
+    },
+    {
+        "id":2,
+        "stockname":"NSE",
+        "remarks":"Must use"
+    }
+    ]
+}

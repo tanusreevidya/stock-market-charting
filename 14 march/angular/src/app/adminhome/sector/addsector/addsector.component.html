@@ -1,0 +1,23 @@
+<div id="body" class="container mt-5">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <form [formGroup]='addSectorForm' class="form-group border p-5 border-curved bg-light mt-5">
+            <p class="h1 text-muted text-uppercase text-center mb-4">Stock Exchange</p>
+         
+            <label for="id">Sector id:</label>
+            <input type="number" class="form-control" placeholder="Id of Sector" formControlName="id" id="id">
+       
+            <label for="name">Sector Name:</label>
+            <input type="text" class="form-control" placeholder="Name of Sector" formControlName="name" id="name">
+
+            <label for="brief">Brief:</label>
+            <input type="text" class="form-control" placeholder="  " formControlName="brief" id="brief">
+
+            <button class="btn btn-success text-dark text-center form-control" (click)="addTheSector()" [disabled]="!addSectorForm.valid">Add Sector</button>
+          </form>
+        </div>
+    </div>
+</div>
+
+

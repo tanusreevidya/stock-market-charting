@@ -1,0 +1,31 @@
+<app-adminnav></app-adminnav>
+   
+
+<div id="body" class="container mt-5">
+  <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <form [formGroup]='updateStockForm' class="form-group border p-5 border-curved bg-light mt-5">
+          <p class="h1 text-muted text-uppercase text-center mb-4">Stock Exchange</p>
+       
+          <label for="id">Stock id:</label>
+          <input type="number" class="form-control" placeholder="Id of Stock Exchange" formControlName="id" id="id" name="id" disabled/>
+     
+          <label for="exchangeName">Stock Exchange Name:</label>
+          <input type="text" class="form-control" placeholder="Name of Stock Exchange" formControlName="exchangeName" id="exchangeName" name="exchangeName">
+
+          <label for="contractAddress">Stock Exchange address:</label>
+          <input type="text" class="form-control" placeholder="Address of Stock Exchange" formControlName="contractAddress" id="contractAddress" name="contractAddress">
+
+          <label for="brief">Brief:</label>
+          <input type="text" class="form-control" placeholder="Brief" formControlName="brief" id="brief" name="brief">
+
+          <label for="remarks">Remarks:</label>
+          <textarea class="form-control mb-4" placeholder="Remarks" rows="3" formControlName="remarks" id="remarks" name="remarks"></textarea>
+
+          <button class="btn btn-success text-dark text-center form-control" (click)="updateTheStock()" [disabled]="!updateStockForm.valid">Update</button>
+        </form>
+      </div>
+  </div>
+</div>
+

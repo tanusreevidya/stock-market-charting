@@ -1,0 +1,43 @@
+<app-adminnav></app-adminnav>
+   
+<div id="body" class="container mt-5 table-responsive">
+    
+            
+    <h1 class="text-center text-uppercase">IPOS</h1>
+
+    <div class="col-9 mx-auto">
+
+<table class="table" border="1" >
+    <tr>
+        <th>ID</th>
+        <th>COMPANYNAME</th>
+        <th>STOCK EXCHANGE</th>
+        <th>PRICE PER SHARE</th>
+        <th>STOCKS</th>
+        <th>DATE</th>
+        <!-- <th>REMARKS</th> -->
+        <th>ACTIONS</th>
+    </tr>
+    <tr *ngFor="let i of ipo">
+    
+        <td>{{i.id}}</td>
+        <td>{{i.companyName}}</td>
+        <td>{{i.stockExchange}}</td>
+        <td>{{i.pricePerShare}}</td>
+        <td>{{i.totalStocks}}</td>
+        <td>{{i.openDateTime | date:"medium"}}</td>
+        <!-- <td>{{i.remarks}}</td>  -->
+        <td><button class="btn btn-danger" (click)="deleteIpo(i)">Delete</button>
+            <button class="btn btn-info" (click)="updateIpo(i)">update</button>
+        </td>
+    </tr>
+</table>
+
+<button class="btn btn-block btn-outline-info" (click)="addIPO()">Add IPO</button>
+
+
+</div>
+</div>
+
+<br>
+<br>

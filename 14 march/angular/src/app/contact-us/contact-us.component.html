@@ -1,0 +1,28 @@
+<div id="body" class="container mt-5">
+    <div class="row">
+       
+        <div class="col-3"></div>
+        
+        <div class="col-6">
+            <h1>Contact US</h1>
+  <form  [formGroup]="contactUsForm" >
+    <label for="fname">Username :</label>
+    <input class="form-control" type="text" id="username" formControlName="username" placeholder="Your Username..">
+
+    <label for="country">Country :</label>
+    <select id="country" formControlName="country" class="form-control">
+      <option value="india">India</option>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" formControlName="subject" class="form-control" placeholder="Write something.." style="height:200px"></textarea>
+
+    <button type="submit" value="Submit" (click)="contactUs()">Submit</button>
+  </form>
+</div>
+</div>
+</div>
+

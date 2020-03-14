@@ -1,0 +1,35 @@
+<app-usernav></app-usernav>
+
+
+<div id="body" class="container mt-5 table-responsive">
+    
+            
+    <h1 class="text-center text-uppercase">Companies</h1>
+
+    <div class="col-9 mx-auto">
+
+
+<div class="table-responsive">
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>SECTOR</th>
+            <th>COMPANY NAME</th>
+            <th>CEO</th>
+            <th>BOARD OF DIRECTORS</th>
+            <!-- <th>STOCKMARKET</th> -->
+            <th>TURNOVER</th>
+        </tr>
+        <tr *ngFor="let com of company">
+            <td>{{com.id}}</td>
+            <td>{{com.sector}}</td>
+            <td>{{com.companyname}}</td>
+            <td>{{com.ceo}}</td>
+            <td>{{com.bod}}</td>
+            <!-- <td>{{com.stockList}}</td> -->
+            <td>{{com.turnover}}</td>
+        </tr>
+    </table>
+    </div>
+    

@@ -192,8 +192,25 @@ spring boot security
 ## Day 45 (22-02-20)
 spring boot on project
 
-## Day 46 (23-02-20)
+## Day 46 (24-02-20)
 project
 
-## Day 47 (24-02-20)
-project
+## Day 47 (25-02-20)
+mail activation
+
+## Day 48 (26-02-20)
+project work
+kba
+
+## Day 49 (27-02-20)
+mail activation
+profiles
+
+## Day 50 (28-02-20)
+services
+
+## Day 51 (29-02-20)
+codesprint
+
+## Day 52 (02-03-20)
+microservices

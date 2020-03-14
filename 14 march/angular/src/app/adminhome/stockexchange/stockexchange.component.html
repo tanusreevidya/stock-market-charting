@@ -1,0 +1,58 @@
+<app-adminnav></app-adminnav>
+   
+
+<div id="body" class="container mt-5 table-responsive">
+    
+            
+    <h1 class="text-center text-uppercase">Stock Exchanges</h1>
+
+    <div class="col-9 mx-auto">
+        <table class="table my-4">
+                <tr>
+                    <th>Id</th>
+                    <th>Stock Exchange</th>
+                    <th>Contract Address</th>
+                    <th>Brief</th>
+                    <th>Remarks</th>
+                    <th>Actions</th>
+                </tr>
+             
+                 <tr>
+                    <td>1</td>
+                    <td>BSE</td>
+                    <td>1 year</td>
+                    <td>better</td>
+                    <td>Good</td>
+                    <td>--</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>NSE</td>
+                    <td>2 yaer</td>
+                    <td>better</td>
+                    <td>Good</td>
+                    <td>--</td>
+                </tr>  
+                <tr *ngFor="let stk of stock">
+                    <td>{{stk.id}}</td>
+                    <td>{{stk.exchangeName}}</td>
+                    <td>{{stk.contractAddress}}</td>
+                    <td>{{stk.brief}}</td>
+                    <td>{{stk.remarks}}</td>
+                    <td><button class="btn btn-danger" (click)="deleteStock(stk)">Delete</button>
+                        <button class="btn btn-info" (click)="updateStock(stk)">update</button>
+                    </td>
+                </tr>
+            
+        </table>
+
+        <button class="btn btn-block btn-outline-secondary" (click)="addStock()">Add Stock Exchange</button>
+    </div>
+    
+
+    
+
+    
+</div>
+<br>
+<br>

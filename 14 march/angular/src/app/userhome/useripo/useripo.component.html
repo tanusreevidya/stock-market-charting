@@ -1,0 +1,32 @@
+<app-usernav></app-usernav>
+
+<div id="body" class="container mt-5 table-responsive">
+    
+            
+    <h1 class="text-center text-uppercase">IPOS</h1>
+
+    <div class="col-9 mx-auto">
+
+<div class="table-responsive">
+
+<table class="table" border="1" >
+    <tr>
+        <th>ID</th>
+        <th>COMPANYNAME</th>
+        <th>STOCK EXCHANGE</th>
+        <th>PRICE PER SHARE</th>
+        <th>STOCKS</th>
+        <th>DATE</th>
+    </tr>
+    <tr *ngFor="let i of ipo">
+    
+        <td>{{i.id}}</td>
+        <td>{{i.companyName}}</td>
+        <td>{{i.stockExchange}}</td>
+        <td>{{i.pricePerShare}}</td>
+        <td>{{i.totalStocks}}</td>
+        <td>{{i.openDateTime | date:"medium"}}</td>
+        
+    </tr>
+</table>
+</div>

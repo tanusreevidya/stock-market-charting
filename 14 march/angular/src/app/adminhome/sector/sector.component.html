@@ -1,0 +1,30 @@
+<div id="body" class="container mt-5 table-responsive">
+    
+            
+    <h1 class="text-center text-uppercase">Sectors</h1>
+
+    <div class="col-9 mx-auto">
+
+<div class="table-responsive">
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>BREIF</th>
+            <th>ACTIONS</th>
+        </tr>
+        <tr *ngFor="let sec of sector">
+        
+            <td>{{sec.id}}</td>
+            <td>{{sec.name}}</td>
+            <td>{{sec.brief}}</td>
+            <td><button class="btn btn-danger" (click)="deleteSector(sec)">Delete</button>
+                <button class="btn btn-info" (click)="updateSector(sec)">update</button>
+            </td>
+        </tr>
+    </table>
+
+    <button class="btn btn-block btn-outline-secondary" (click)="addSector()">Add Sector</button>
+    </div>
+    
