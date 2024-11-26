@@ -36,7 +36,7 @@ public class RegisterServiceImpl implements RegisterService {
 			try {
 				MimeMessage mimeMessage=javaMailSender.createMimeMessage();
 				MimeMessageHelper helper=new MimeMessageHelper(mimeMessage,"utf-8");
-				helper.setFrom("tanusreevidya13@gmail.com");			
+				helper.setFrom("**@gmail.com");			
 				helper.setTo(register.getEmail());
 				helper.setSubject("verification mail");
 				//sm.setText("This is testing mail");
@@ -66,7 +66,7 @@ public class RegisterServiceImpl implements RegisterService {
 //		String email;
 //		try {
 //			SimpleMailMessage message= new SimpleMailMessage();
-//			message.setFrom("tanusreevidya13@gmail.com");
+//			message.setFrom("**@gmail.com");
 //			message.setTo(registerDTO.getEmail());
 //			email=registerDTO.getEmail();
 //			if(registerRepo.findByEmail(email)!= null) {
